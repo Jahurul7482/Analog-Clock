@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    transition: all ease .5s;
+}
+body{
+    background-color: #ddd;
+    overflow: hidden;
+}
+.container{
+    position: relative;
+    background-image: linear-gradient(red, blue, green, blue, red);
+    height: 72vh;
+    width: 72vh;
+    margin: auto;
+    border-radius: 50%;
+    top: calc(100vh/2 - 72vh/2);
+    .clock{
+        position: relative;
+        margin: auto;
+        top: calc(72vh/2 - 70vh/2);
+        background-color: red;
+        background-image: url(../images/ClockBG.jpg);
+        background-size: cover;
+        z-index: 1;
+        height: 70vh;
+        width: 70vh;
+        border-radius: 50%;
+        .hours{
+            height: 16vh;
+            width: 1vh;
+            background-color: blue;
+            border-radius:100% 100% 0 0;
+            position: absolute;
+            bottom: calc(70vh/2);
+            left: calc(70vh/2 - 1vh/2);
+            transform-origin: bottom;
+            transform: rotate(90deg);
+            transition: all ease 0s;
+        }
+        .minutes{
+            height: 22vh;
+            width: .6vh;
+            background-color: green;
+            border-radius:100% 100% 1vh 1vh;
+            position: absolute;
+            bottom: calc(70vh/2);
+            left: calc(70vh/2 - .6vh/2);
+            transform-origin: bottom;
+            transform: rotate(180deg);
+            transition: all ease 0s;
+        }
+        .seconds{
+            height: 26vh;
+            width: .2vh;
+            background-color:  red;
+            border-radius:100% 100% 0 0;
+            position: absolute;
+            bottom: calc(70vh/2);
+            left: calc(70vh/2 - .2vh/2);
+            transform-origin: bottom;
+            transform: rotate(270deg);
+            transition: all ease 0s;
+        }
+    }
+}
