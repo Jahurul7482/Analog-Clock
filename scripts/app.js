@@ -11,7 +11,7 @@ const SetTime = () => {
     const seconds = Time.getSeconds();
     // make Pin degrees
     const hourPin = (360 / 12 *  hours) + (minutes / 2);
-    const minutePin = (360 / 60 *  minutes) + (seconds / 5);
+    const minutePin = (360 / 60 *  minutes) + (seconds / 12);
     const secondPin = (360 / 60 *  seconds);
     // adjusted time to Clock
     hourElement.style.transform = `rotate(${hourPin}deg)`
